@@ -2,32 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ObjectPositioning : MonoBehaviour
 {
-    public float speed = 0.5f;
-
-    private Vector3 start;
-    public Vector3 destination;
-    private float fraction = 0;
-
-
+    public Vector3 positionToMoveTo;
     void Start()
     {
-        start = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        StartCoroutine(LerpPosition(positionToMoveTo, 5));
     }
-
-    void Update()
+    IEnumerator LerpPosition(Vector3 targetPosition, float duration)
     {
-
-        if (fraction < 1)
+        float time = 0;
+        Vector3 startPosition = transform.position;
+        while (time < duration)
         {
-            fraction += Time.deltaTime * speed;
-            transform.position = Vector3.Lerp(start, destination, fraction);
+            transform.position = Vector3.Lerp(startPosition, targetPosition, time / duration);
+            time += Time.deltaTime;
+            yield return null;
         }
+        transform.position = targetPosition;
     }
-
 }
-
-
-
-
