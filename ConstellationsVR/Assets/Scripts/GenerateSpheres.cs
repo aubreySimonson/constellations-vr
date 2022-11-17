@@ -13,12 +13,10 @@ public class GenerateSpheres : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      Debug.Log("The start function starts");
       //generate spheres
       //This process is a bit stupid because Resources.LoadAll returns Objects,
       //And Unity is very concerned that they might not be AudioClips
       soundsAsObjects = Resources.LoadAll(filePath, typeof(AudioClip));
-      Debug.Log("We get through loading sounds as Objects");
       foreach(Object soundAsObject in soundsAsObjects){
         sounds.Add((AudioClip)soundAsObject);
       }
@@ -27,6 +25,7 @@ public class GenerateSpheres : MonoBehaviour
         GameObject newSphere = Instantiate(soundSpherePrefab, pos, Quaternion.identity);
         newSphere.GetComponent<AudioSource>().clip = sound;
         newSphere.GetComponent<Renderer>().material = sphereMats[Random.Range(0, sphereMats.Count)];
+
       }
     }
 
