@@ -3,15 +3,15 @@
 ///Aubrey Simonson (his boyfriend, inventor) based on Aubrey's 2021 MIT Media Lab Thesis project, Bird.
 ///For more information on Bird, see: https://drive.google.com/file/d/1p6IUu9QIzWNBERz3IW_yVcojQjVz06rl/view?usp=sharing
 ///This project works with the OVR Toolkit, and once OpenXR is more stable, someone should probably make an OpenXR version.
-/// 
+///
 /// BirdInteractable.cs goes on an object that bird can interact with.
 /// This code is full of options for exactly how the object behaves, which is why it is so long.
 /// No linear algebra was harmed in the creation of this script.
-/// 
+///
 /// It requires Bird.cs on at least one hand.
-/// 
+///
 /// //note here later for anything that needs connected
-/// 
+///
 ///???---> asimonso@mit.edu/followspotfour@gmail.com // dgretton@mit.edu/dana.gretton@gmail.com
 ///Last edited February 2022
 
@@ -117,6 +117,11 @@ public class BirdInteractable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //NEW CODE NOVEMBER 2022~Aubrey
+        if(bird == null){
+          bird = GameObject.Find("OVRHandPrefab_Right").GetComponent<Bird>();
+        }
+        //END NEW CODE
         //start Kalman filtering related things
         float Q;
         float R;

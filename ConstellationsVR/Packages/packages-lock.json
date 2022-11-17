@@ -1,10 +1,11 @@
 {
   "dependencies": {
     "com.csound.csoundunity": {
-      "version": "file:/Users/mateolarreaferro/Desktop/cuSketch/CsoundUnity",
+      "version": "https://github.com/rorywalsh/CsoundUnity.git",
       "depth": 0,
-      "source": "local",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "9f1edde5f1326502e5a4cd912590de5a9054b241"
     },
     "com.unity.asset-store-tools": {
       "version": "file:com.unity.asset-store-tools",

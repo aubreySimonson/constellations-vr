@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7806036880725405580}
   - component: {fileID: 7075080782819331282}
   - component: {fileID: 8092683009540657080}
+  - component: {fileID: 2004902719}
   m_Layer: 0
   m_Name: SoundSphere
   m_TagString: Untagged
@@ -95,7 +96,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7075080782819331282
 MonoBehaviour:
@@ -205,3 +206,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2004902719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7806036880725405579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd494394095c7454096ed9a5d77e2c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bird: {fileID: 0}
+  activateType: 1
+  selectBehind: 1
+  motionType: 1
+  offset: 0
+  trackingSpeed: 2
+  orientationMode: 3
+  orientationSource: 0
+  snapObjects: []
+  OnSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeselect:
+    m_PersistentCalls:
+      m_Calls: []
