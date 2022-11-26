@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectManager : MonoBehaviour
 {
     // Csound Object - for sound editing
-    [SerializeField] GameObject CsoundEditor; // Object where sample is attached
+    //[SerializeField] GameObject CsoundEditor; // Object where sample is attached
     [SerializeField] Transform startingPosition;
     int numberOfCsoundUnityInstances = 0;
 
@@ -25,12 +25,12 @@ public class ObjectManager : MonoBehaviour
     [SerializeField] Student[] students;
 
 
-    public void InstantiateCsoundObject()
-    {
-        numberOfCsoundUnityInstances++;
-        GameObject copy = Instantiate(CsoundEditor, startingPosition);
-        copy.name = "CU" + numberOfCsoundUnityInstances.ToString();
-    }
+    //public void InstantiateCsoundObject()
+    //{
+    //    numberOfCsoundUnityInstances++;
+    //    GameObject copy = Instantiate(CsoundEditor, startingPosition);
+    //    copy.name = "CU" + numberOfCsoundUnityInstances.ToString();
+    //}
 
     public void ToggleBetweenSampleModes()
     {
@@ -40,15 +40,16 @@ public class ObjectManager : MonoBehaviour
             vocalMode = true;
     }
 
+    // Hover over the text should trigger the sample
     public void ScrollingThroughSamples(int id)
     {
         if (vocalMode)
         {
-            _source.clip = vocalSamples[id];
+            _source.clip = students[id].vocalSample;
         }
         else
         {
-            _source.clip = projectSamples[id];
+            _source.clip = students[id].projectSample;
         }
 
         _source.Play();

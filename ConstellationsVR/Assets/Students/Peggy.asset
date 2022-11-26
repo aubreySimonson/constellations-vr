@@ -18,3 +18,5 @@ MonoBehaviour:
   school: Harvard
   team: Dovetail
   age: 0
+  vocalSample: {fileID: 8300000, guid: c53bb9548403a410f8efa8971a4ea367, type: 3}
+  projectSample: {fileID: 8300000, guid: ae1bfb09e3d50406bbee135788404091, type: 3}

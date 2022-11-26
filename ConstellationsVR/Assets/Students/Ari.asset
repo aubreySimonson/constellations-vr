@@ -18,3 +18,5 @@ MonoBehaviour:
   school: Berklee
   team: Dovetail
   age: 0
+  vocalSample: {fileID: 8300000, guid: e808ee8c0623c40e08c5daf9702b9fa6, type: 3}
+  projectSample: {fileID: 8300000, guid: 2be03de164a1048ee90922c93593ce18, type: 3}

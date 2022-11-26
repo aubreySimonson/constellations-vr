@@ -14,6 +14,8 @@ public class Student : ScriptableObject
     public string school;
     public string team;
     public float age;
+    public AudioClip vocalSample;
+    public AudioClip projectSample;
 
     #endregion
 }

@@ -18,3 +18,5 @@ MonoBehaviour:
   school: Berklee
   team: Aura
   age: 0
+  vocalSample: {fileID: 0}
+  projectSample: {fileID: 8300000, guid: e4b103bbb391f4fcea283de09ac4dfee, type: 3}

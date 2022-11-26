@@ -18,3 +18,5 @@ MonoBehaviour:
   school: Harvard
   team: Emmm
   age: 0
+  vocalSample: {fileID: 8300000, guid: 1abc294e770074200ae47e170818f479, type: 3}
+  projectSample: {fileID: 8300000, guid: 540411b875df640439d2a70107974045, type: 3}

@@ -18,3 +18,5 @@ MonoBehaviour:
   school: Berklee
   team: Magic
   age: 0
+  vocalSample: {fileID: 8300000, guid: d2e5b171c36f54e98adc0efb269a04e6, type: 3}
+  projectSample: {fileID: 8300000, guid: 4ca111de5ce5049bca4ca20b3e06e561, type: 3}

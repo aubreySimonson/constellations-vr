@@ -18,3 +18,5 @@ MonoBehaviour:
   school: MIT
   team: Dovetail
   age: 0
+  vocalSample: {fileID: 8300000, guid: 5d479b2875db8404e86727dc7284c3c1, type: 3}
+  projectSample: {fileID: 8300000, guid: e58127e2136a2452d89d9f0263d94225, type: 3}
