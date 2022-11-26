@@ -1,3 +1,9 @@
+//Generates a collection of sphere prefabs based on the contents of the file at filePath
+//one sphere per audio clip in the folder
+//Part of ConstellationsVR
+//???--> Aubrey (asimonso@mit.edu)
+//last edited November 2022
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
