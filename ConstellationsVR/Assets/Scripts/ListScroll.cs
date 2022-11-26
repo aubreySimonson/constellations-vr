@@ -14,8 +14,7 @@ public class ListScroll : MonoBehaviour
     public Bird bird;
     Collider thisCollider;//collider component of the object this script is on
     private bool inCollider = false;
-    public Text canaryText;
-    public Text birdPosText;
+    private float yPos;//y position when bird enters object-- prevents snapping to the middle of the list
 
     // Start is called before the first frame update
     void Start()
@@ -29,17 +28,20 @@ public class ListScroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      birdPosText.text = bird.birdPosition.ToString();
       if(bird.birdRayHit.collider != null && bird.birdRayHit.collider == thisCollider){
-        gameObject.transform.position = new Vector3(gameObject.transform.position.x, bird.birdPosition.y, gameObject.transform.position.z);
-        inCollider = true;
-        canaryText.text = "we hit the canary!";
-      }
+        //we want to be sure to update yPos once, when the bird enters the collider,
+        //rather than every frame, so that we don't just move it vertically by
+        //birdPosition.y meters per frame
+        if(!inCollider){
+          yPos = bird.birdPosition.y;
+          inCollider = true;
+        }//end if
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x, bird.birdPosition.y - yPos, gameObject.transform.position.z);
+      }//end if
       else{
         if(inCollider){
           inCollider=false;
-          canaryText.text = "exited the collider";
-        }
-      }
-    }
+        }//end if
+      }//end else
+    }//end update
 }
