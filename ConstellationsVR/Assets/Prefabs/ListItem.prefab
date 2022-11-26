@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5765415405493645937}
   - component: {fileID: 7080714972995002784}
   - component: {fileID: 8469835900562258231}
+  - component: {fileID: 5295636091836941006}
   m_Layer: 5
   m_Name: ListItem
   m_TagString: Untagged
@@ -108,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bird: {fileID: 0}
   activateType: 1
-  selectBehind: 0
+  selectBehind: 1
   motionType: 0
   offset: 0
   trackingSpeed: 0
@@ -133,3 +134,47 @@ MonoBehaviour:
   OnDeselect:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5295636091836941006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5765415405493645951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3b1c3cfcf0e8488c80c352ee1b8fcfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listScroll: {fileID: 0}
+  bird: {fileID: 0}
+  OnTouch:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5765415405493645937}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: text touched
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnRelease:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5765415405493645937}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: text released
+          m_BoolArgument: 0
+        m_CallState: 2
