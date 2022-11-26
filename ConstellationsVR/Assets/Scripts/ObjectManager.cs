@@ -13,11 +13,16 @@ public class ObjectManager : MonoBehaviour
     public bool vocalMode = true; // vocal Samples are displayed (true), project samples are displayed (false)
     [SerializeField] AudioClip[] vocalSamples;
     [SerializeField] AudioClip[] projectSamples;
-    [SerializeField] GameObject sampleObject;
+    [SerializeField] GameObject sampleObjectStudent;
+    [SerializeField] GameObject sampleObjectTeachingTeam;
 
 
     // Audio Source for interface (plays sample when hovering over name)
     [SerializeField] AudioSource _source;
+
+
+    // Students - Data Structure
+    [SerializeField] Student[] students;
 
 
     public void InstantiateCsoundObject()
@@ -51,7 +56,23 @@ public class ObjectManager : MonoBehaviour
 
     public void SelectingSample(int id)
     {
+        if (students[id].teachingTeam)
+        {
+            GameObject instance = Instantiate(sampleObjectTeachingTeam);
+            UpdateInformation(id, instance);
+        }
+        else
+        {
+            GameObject instance = Instantiate(sampleObjectStudent);
+            UpdateInformation(id, instance);
+        }
 
-     
     }
+
+    void UpdateInformation(int id, GameObject instance)
+    {
+        instance.name = students[id].name;
+        instance.tag = students[id].school; // Remember to add these tags to the project
+    }
+
 }
