@@ -7,30 +7,38 @@ public class ObjectManager : MonoBehaviour
     // Csound Object - for sound editing
     //[SerializeField] GameObject CsoundEditor; // Object where sample is attached
     [SerializeField] Transform startingPosition;
+    [SerializeField] GameObject CsoundObject;
     int numberOfCsoundUnityInstances = 0;
+    int numberOfStudent;
+    
 
     // Sample Mgmt
     public bool vocalMode = true; // vocal Samples are displayed (true), project samples are displayed (false)
-    [SerializeField] AudioClip[] vocalSamples;
-    [SerializeField] AudioClip[] projectSamples;
     [SerializeField] GameObject sampleObjectStudent;
     [SerializeField] GameObject sampleObjectTeachingTeam;
 
 
     // Audio Source for interface (plays sample when hovering over name)
-    [SerializeField] AudioSource _source;
+    [SerializeField] AudioSource _source; 
 
 
     // Students - Data Structure
     [SerializeField] Student[] students;
 
 
-    //public void InstantiateCsoundObject()
-    //{
-    //    numberOfCsoundUnityInstances++;
-    //    GameObject copy = Instantiate(CsoundEditor, startingPosition);
-    //    copy.name = "CU" + numberOfCsoundUnityInstances.ToString();
-    //}
+
+    private void Start()
+    {
+        numberOfStudent = students.Length;
+    }
+
+
+    public void InstantiateCsoundObject()
+    {
+        numberOfCsoundUnityInstances++;
+        GameObject copy = Instantiate(CsoundObject, startingPosition);
+        copy.name = "CU" + numberOfCsoundUnityInstances.ToString();
+    }
 
     public void ToggleBetweenSampleModes()
     {
@@ -49,7 +57,8 @@ public class ObjectManager : MonoBehaviour
         }
         else
         {
-            _source.clip = students[id].projectSample;
+            int correctID = (int) numberOfStudent / 2 + id; //Allows to have one single Csound.Load
+            _source.clip = students[correctID].projectSample;
         }
 
         _source.Play();
@@ -74,6 +83,7 @@ public class ObjectManager : MonoBehaviour
     {
         instance.name = students[id].name;
         instance.tag = students[id].school; // Remember to add these tags to the project
+
     }
 
 }
