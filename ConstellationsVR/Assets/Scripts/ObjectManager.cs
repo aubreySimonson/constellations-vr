@@ -83,6 +83,7 @@ public class ObjectManager : MonoBehaviour
     {
         instance.name = students[id].name;
         instance.tag = students[id].school; // Remember to add these tags to the project
+        instance.GetComponent<SampleSelector>()._id = id;
 
     }
 

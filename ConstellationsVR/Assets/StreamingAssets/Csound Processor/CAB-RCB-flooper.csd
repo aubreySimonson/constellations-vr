@@ -106,16 +106,16 @@ endin
 
 instr Flooper
 
-Sfile1   = "./samplers/flo1.aif"
-Sfile2   =  "./samplers/flo2.aif"
-Sfile3   =  "./samplers/flo3.aif"
-Sfile4   =  "./samplers/flo4.aif"
-Sfile5   = "./samplers/flo5.aif"
-Sfile6   =  "./samplers/flo6.wav"
-Sfile7   = "./samplers/flo1.aif"
-Sfile8   = "./samplers/flo1.aif"
-Sfile9   = "./samplers/flo1.aif"
-Sfile10  = "./samplers/flo1.aif"
+Sfile1   = "./AudioFiles/alexander-antaya-1.mp3"
+Sfile2   =  "./AudioFiles/ari-davids-1.mp3"
+Sfile3   =  "./AudioFiles/alexander-antaya-1.mp3"
+Sfile4   =  "./AudioFiles/davide-zhang-1.mp3"
+Sfile5   = "./AudioFiles/emmanuel-serrano-1.mp3"
+Sfile6   =  "./AudioFiles/yinghou-wang-1.mp3"
+Sfile7   = "./AudioFiles/ilknur-aspir-1.mp3"
+Sfile8   = "./AudioFiles/ingrid-chan-1.mp3"
+Sfile9   = "./AudioFiles/jenny-jiang-1.mp3"
+Sfile10  = "./AudioFiles/jessica-boyedoe-1.mp3"
 
 
 giSmp1   ftgen  1, 0, 0, 1,  Sfile1, 0, 0, 0
