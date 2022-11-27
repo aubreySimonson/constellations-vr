@@ -64,6 +64,11 @@ public class ObjectManager : MonoBehaviour
         _source.Play();
     }
 
+    public void StopSample()
+    {
+        _source.Stop();
+    }
+
     public void SelectingSample(int id)
     {
         if (students[id].teachingTeam)
