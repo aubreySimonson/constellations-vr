@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Constellations.unity
     guid: dcd8bc92804e34f308585032e2913935
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ScrollingSampleStack.unity
     guid: 49d3157bfa83342bfbf899cebea34855
+  - enabled: 1
+    path: Assets/Scenes/Sliders.unity
+    guid: c122232e5497a4f329fdaadea28b13e4
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4daf66f6c4631044fa374ee5fb30132f, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 344fd14d6d7966e4e9264e3e2583c072, type: 2}
