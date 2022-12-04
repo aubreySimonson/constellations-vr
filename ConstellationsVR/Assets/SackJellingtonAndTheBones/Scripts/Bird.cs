@@ -3,18 +3,18 @@
 ///Aubrey Simonson (his boyfriend, inventor) based on Aubrey's 2021 MIT Media Lab Thesis project, Bird.
 ///For more information on Bird, see: https://drive.google.com/file/d/1p6IUu9QIzWNBERz3IW_yVcojQjVz06rl/view?usp=sharing
 ///This project works with the OVR Toolkit, and once OpenXR is more stable, someone should probably make an OpenXR version.
-/// 
-/// Bird.cs handles all of the crazy linear algebra for converting the hand skeleton points to 
-/// an individual point in space which moves smoothly in an easy to control way. 
-/// 
+///
+/// Bird.cs handles all of the crazy linear algebra for converting the hand skeleton points to
+/// an individual point in space which moves smoothly in an easy to control way.
+///
 /// It does so using sphere fit and Kalman filtering.
 /// For how on Earth one does sphere fit code, we are grateful for this useful article:
 /// https://jekel.me/2015/Least-Squares-Sphere-Fit/
-/// 
+///
 /// Doesn't strictly require other scripts (that's on purpose!)
 /// Remember to give it materials for birdSelectedMaterial and birdMaterial in the inspector
 /// Put this script on the hand! Specifically, it should go an OVRHandPrefab with an OVRSkeleton component
-/// 
+///
 ///???---> asimonso@mit.edu/followspotfour@gmail.com // dgretton@mit.edu/dana.gretton@gmail.com
 ///Last edited February 2022
 
@@ -103,7 +103,7 @@ public class Bird : MonoBehaviour {
         hitMarker = Instantiate(debugMarker);
         aIntermediates = new float[4];
 
-        //it's important that we change R based on bird distance from hand (in the update function) because jitter at the end of a 
+        //it's important that we change R based on bird distance from hand (in the update function) because jitter at the end of a
         //raycast which is far away is more than the scale of intentional movements nearby
         filter = new KalmanFilterVector3(0.001f, .06f); // Q is process variance, R is measurement variance
 
