@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 2098323262023087692}
   - component: {fileID: 2098323262023087734}
   - component: {fileID: 6884846586184322209}
+  - component: {fileID: -2297156905815991415}
+  - component: {fileID: 2127345969952745380}
   m_Layer: 0
   m_Name: Csound Object
   m_TagString: Untagged
@@ -108,7 +110,7 @@ AudioSource:
   m_GameObject: {fileID: 2098323262023087695}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 1dd706bb85d8aef4e83a6229dbd62c36, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -243,7 +245,7 @@ MonoBehaviour:
     255, 255, 255) colour(0, 0, 0, 0) fontColour(255, 255, 255, 255) outlineColour(0,
     0, 0, 50) textColour(255, 255, 255, 255) colour(0, 0, 0, 0) fontColour(255, 255,
     255, 255) outlineColour(0, 0, 0, 50) textColour(255, 255, 255, 255)\nrslider
-    bounds(202, 34, 79, 66), channel(\"pitch\"), range(0.1, 4, 1, 1, 0.01), text(\"Pitch\"),
+    bounds(202, 34, 79, 66), channel(\"pitch\"), range(0.01, 6, 1, 1, 0.01), text(\"Pitch\"),
     trackerColour(255, 255, 255, 255), outlineColour(0, 0, 0, 50), textColour(0,
     0, 0, 255)\n\ngroupbox bounds(306, 10, 106, 105) channel(\"groupbox1\") text(\"LoopStart\")
     colour(0, 0, 0, 0) outlineColour(0, 0, 0, 50), textColour(255, 255, 255, 255)
@@ -276,9 +278,9 @@ MonoBehaviour:
     trackerColour(255, 255, 255, 255)\nrslider bounds(536, 142, 71, 51) channel(\"chorMod\"),
     range(0.01, 0.5, 0.25, 1, 0.001), text(\"ChorusMod\") textColour(255, 255, 255,
     255), trackerColour(255, 255, 255, 255)\n\nrslider bounds(458, 198, 68, 51),
-    channel(\"echoLvl\"), range(0, 1, 0.75, 1, 0.01), text(\"Echo\"), textColour(255,
+    channel(\"echoLvl\"), range(0, 2, 0.75, 1, 0.01), text(\"Echo\"), textColour(255,
     255, 255, 255), trackerColour(255, 255, 255, 255)\nrslider bounds(536, 198, 72,
-    51), channel(\"echoMod\"), range(0.01, 2, 1, 1, 0.01), text(\"EchoMod\"), textColour(255,
+    51), channel(\"echoMod\"), range(0.01, 4, 1, 1, 0.01), text(\"EchoMod\"), textColour(255,
     255, 255, 255), trackerColour(255, 255, 255, 255)\n\nrslider bounds(458, 252,
     68, 51), channel(\"flangLvl\"), range(0, 1, 0.75, 1, 0.01), text(\"Flanger\"),
     textColour(255, 255, 255, 255), trackerColour(255, 255, 255, 255)\nrslider bounds(536,
@@ -322,7 +324,7 @@ MonoBehaviour:
     \"Flooper\", 0, kDur\n        kTrig = 0\n    endif\n    \n    kStop chnget \"stop\"\n   
     if changed(kStop) == 1 then\n       turnoff2 \"Flooper\", 0, 1\n       kStop
     = 0\n    endif\nendin\n\n\ninstr Flooper\n\nSfile1   = \"./AudioFiles/alexander-antaya-1.mp3\"\nSfile2  
-    =  \"./AudioFiles/ari-davids-1.mp3\"\nSfile3   =  \"./AudioFiles/cynthia-liuqianyu.mp3\"\nSfile4  
+    =  \"./AudioFiles/ari-davids-1.mp3\"\nSfile3   =  \"./AudioFiles/alexander-antaya-1.mp3\"\nSfile4  
     =  \"./AudioFiles/davide-zhang-1.mp3\"\nSfile5   = \"./AudioFiles/emmanuel-serrano-1.mp3\"\nSfile6  
     =  \"./AudioFiles/yinghou-wang-1.mp3\"\nSfile7   = \"./AudioFiles/ilknur-aspir-1.mp3\"\nSfile8  
     = \"./AudioFiles/ingrid-chan-1.mp3\"\nSfile9   = \"./AudioFiles/jenny-jiang-1.mp3\"\nSfile10 
@@ -556,8 +558,8 @@ MonoBehaviour:
     channel: pitch
     text: Pitch
     caption: 
-    min: 0.1
-    max: 4
+    min: 0.01
+    max: 6
     value: 1
     skew: 1
     increment: 0.01
@@ -667,7 +669,7 @@ MonoBehaviour:
     text: Echo
     caption: 
     min: 0
-    max: 1
+    max: 2
     value: 0.75
     skew: 1
     increment: 0.01
@@ -677,7 +679,7 @@ MonoBehaviour:
     text: EchoMod
     caption: 
     min: 0.01
-    max: 2
+    max: 4
     value: 1
     skew: 1
     increment: 0.01
@@ -868,3 +870,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cc63b2bffc384abd813e752c89b2c69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!168 &-2297156905815991415
+AudioEchoFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098323262023087695}
+  m_Enabled: 1
+  m_Delay: 10
+  m_DecayRatio: 0.5
+  m_WetMix: 1
+  m_DryMix: 1
+--- !u!169 &2127345969952745380
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098323262023087695}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.22727273
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

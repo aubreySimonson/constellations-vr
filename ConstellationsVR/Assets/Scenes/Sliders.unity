@@ -2029,38 +2029,6 @@ MonoBehaviour:
   _headPoseRelativeOffsetRotation: {x: 0, y: 0, z: 0}
   _headPoseRelativeOffsetTranslation: {x: 0, y: 0, z: 0}
   profilerTcpPort: 32419
-  expandMixedRealityCapturePropertySheet: 0
-  enableMixedReality: 0
-  compositionMethod: 0
-  extraHiddenLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  extraVisibleLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  dynamicCullingMask: 1
-  externalCompositionBackdropColorRift: {r: 0, g: 1, b: 0, a: 1}
-  externalCompositionBackdropColorQuest: {r: 0, g: 0, b: 0, a: 0}
-  capturingCameraDevice: 0
-  flipCameraFrameHorizontally: 0
-  flipCameraFrameVertically: 0
-  handPoseStateLatency: 0
-  sandwichCompositionRenderLatency: 0
-  sandwichCompositionBufferedFrames: 8
-  chromaKeyColor: {r: 0, g: 1, b: 0, a: 1}
-  chromaKeySimilarity: 0.6
-  chromaKeySmoothRange: 0.03
-  chromaKeySpillRange: 0.06
-  useDynamicLighting: 0
-  depthQuality: 1
-  dynamicLightingSmoothFactor: 8
-  dynamicLightingDepthVariationClampingValue: 0.001
-  virtualGreenScreenType: 0
-  virtualGreenScreenTopY: 10
-  virtualGreenScreenBottomY: -10
-  virtualGreenScreenApplyDepthCulling: 0
-  virtualGreenScreenDepthTolerance: 0.2
-  mrcActivationMode: 0
   isInsightPassthroughEnabled: 0
   _trackingOriginType: 0
   usePositionTracking: 1
@@ -3069,7 +3037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1958645441084958762, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 1958645441084958762, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3106,6 +3074,10 @@ PrefabInstance:
     - target: {fileID: 1958645441084958762, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958645441877987776, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.027
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}

@@ -11,7 +11,7 @@ label  bounds(252, 164, 80, 20), text("Sample"), fontColour(255, 255, 255, 255) 
 combobox bounds(246, 190, 95, 28), channel("sound"),fontColour("White"),text("Pins","Dog","Traffic","Bird","Fire","Hello","Perotin","Brahms","Tomek1","Tomek2")
 
 groupbox bounds(188, 12, 104, 105) channel("groupbox2") text("Pitch") colour(0, 0, 0, 0) outlineColour(0, 0, 0, 50), textColour(255, 255, 255, 255) fontColour(255, 255, 255, 255) colour(0, 0, 0, 0) fontColour(255, 255, 255, 255) outlineColour(0, 0, 0, 50) textColour(255, 255, 255, 255) colour(0, 0, 0, 0) fontColour(255, 255, 255, 255) outlineColour(0, 0, 0, 50) textColour(255, 255, 255, 255)
-rslider bounds(202, 34, 79, 66), channel("pitch"), range(0.1, 4, 1, 1, 0.01), text("Pitch"), trackerColour(255, 255, 255, 255), outlineColour(0, 0, 0, 50), textColour(0, 0, 0, 255)
+rslider bounds(202, 34, 79, 66), channel("pitch"), range(0.01, 6, 1, 1, 0.01), text("Pitch"), trackerColour(255, 255, 255, 255), outlineColour(0, 0, 0, 50), textColour(0, 0, 0, 255)
 
 groupbox bounds(306, 10, 106, 105) channel("groupbox1") text("LoopStart") colour(0, 0, 0, 0) outlineColour(0, 0, 0, 50), textColour(255, 255, 255, 255) fontColour(255, 255, 255, 255) colour(0, 0, 0, 0) fontColour(255, 255, 255, 255) outlineColour(0, 0, 0, 50) textColour(255, 255, 255, 255) colour(0, 0, 0, 0) fontColour(255, 255, 255, 255) outlineColour(0, 0, 0, 50) textColour(255, 255, 255, 255)
 rslider bounds(320, 36, 79, 66), channel("loopStrt"), range(0, 1, 0, 1, 0.01), text("LoopStart"), trackerColour(255, 255, 255, 255), outlineColour(0, 0, 0, 50), textColour(0, 0, 0, 255)
@@ -31,8 +31,8 @@ label  bounds(476, 120, 104, 20), text("Global FX"), fontColour(255, 255, 255, 2
 rslider bounds(456, 142, 72, 51) channel("chorLvl"), range(0, 1, 0.76, 1, 0.001), text("Chorus") textColour(255, 255, 255, 255), trackerColour(255, 255, 255, 255)
 rslider bounds(536, 142, 71, 51) channel("chorMod"), range(0.01, 0.5, 0.25, 1, 0.001), text("ChorusMod") textColour(255, 255, 255, 255), trackerColour(255, 255, 255, 255)
 
-rslider bounds(458, 198, 68, 51), channel("echoLvl"), range(0, 1, 0.75, 1, 0.01), text("Echo"), textColour(255, 255, 255, 255), trackerColour(255, 255, 255, 255)
-rslider bounds(536, 198, 72, 51), channel("echoMod"), range(0.01, 2, 1, 1, 0.01), text("EchoMod"), textColour(255, 255, 255, 255), trackerColour(255, 255, 255, 255)
+rslider bounds(458, 198, 68, 51), channel("echoLvl"), range(0, 2, 0.75, 1, 0.01), text("Echo"), textColour(255, 255, 255, 255), trackerColour(255, 255, 255, 255)
+rslider bounds(536, 198, 72, 51), channel("echoMod"), range(0.01, 4, 1, 1, 0.01), text("EchoMod"), textColour(255, 255, 255, 255), trackerColour(255, 255, 255, 255)
 
 rslider bounds(458, 252, 68, 51), channel("flangLvl"), range(0, 1, 0.75, 1, 0.01), text("Flanger"), textColour(255, 255, 255, 255), trackerColour(255, 255, 255, 255)
 rslider bounds(536, 252, 73, 51), channel("flangMod"), range(0.1, 1, 0.5, 1, 0.01), text("FlangerMod"), textColour(255, 255, 255, 255), trackerColour(255, 255, 255, 255)
