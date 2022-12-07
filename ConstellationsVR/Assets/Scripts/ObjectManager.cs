@@ -34,6 +34,9 @@ public class ObjectManager : MonoBehaviour
     [SerializeField] Vector3[] SchoolPosition; // 0 = Berklee, 1 = Harvard, 2 = MIT
     [SerializeField] Vector3[] GroupPosition; // 0 = Aura, 1 = Magic, 2 = MusiCraft, 3 = Sonic Soup, 4 = StageFreight
     Vector3 result;
+    [SerializeField] float lerpingTime = 8f;
+    // Random Positioning
+    float maxDistance = 20f;
 
 
     public void InstantiateCsoundObject()
@@ -118,14 +121,50 @@ public class ObjectManager : MonoBehaviour
                             break;
                     }
 
-                    StartCoroutine(LerpPosition(result, 5, inScene[i]));
+                    StartCoroutine(LerpPosition(result, lerpingTime, inScene[i]));
                 }
 
-break;
+                break;
+
             case 1: // Group Sorting
+                for (int i = 0; i < inScene.Length; i++)
+                {
+                    string group = inScene[i].GetComponent<ObjectLogic>().studentData.school;
+                    Vector3 offset = new Vector3(Random.Range(0, 3), Random.Range(0, 3), Random.Range(0, 3));
+
+                    switch (group)
+                    {
+                        case "Aura":
+                            result = GroupPosition[0] + offset;
+                            break;
+                        case "Magic":
+                            result = GroupPosition[1] + offset;
+                            break;
+                        case "MusiCraft":
+                            result = GroupPosition[2] + offset;
+                            break;
+                        case "SonicSoup":
+                            result = GroupPosition[3] + offset;
+                            break;
+                        case "StageFreight":
+                            result = GroupPosition[4] + offset;
+                            break;
+
+                    }
+
+                    StartCoroutine(LerpPosition(result, lerpingTime, inScene[i]));
+                }
 
                 break;
             case 2: // Random
+
+                for (int i = 0; i < inScene.Length; i++)
+                {
+                    Vector3 randomPosition = new Vector3(Random.Range(-maxDistance, maxDistance), Random.Range(-maxDistance, maxDistance),
+                        Random.Range(-maxDistance, maxDistance));
+
+                    StartCoroutine(LerpPosition(randomPosition, 5, inScene[i]));
+                }
 
                 break;
         }
