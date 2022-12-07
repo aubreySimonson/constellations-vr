@@ -43,6 +43,7 @@ public class ObjectManager : MonoBehaviour
     {
         numberOfCsoundUnityInstances++;
         GameObject copy = Instantiate(CsoundObject, startingPosition);
+        copy.tag = "unselected";
         copy.name = "CU" + numberOfCsoundUnityInstances.ToString();
     }
 
