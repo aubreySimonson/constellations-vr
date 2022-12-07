@@ -18,3 +18,5 @@ MonoBehaviour:
   school: Harvard
   team: Magic
   age: 0
+  vocalSample: {fileID: 8300000, guid: dfcf1ce7bd6574ddc87e6b49412fda50, type: 3}
+  projectSample: {fileID: 8300000, guid: 42de5f5fc3d0045fba27cb585ba4935a, type: 3}

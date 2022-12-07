@@ -18,3 +18,5 @@ MonoBehaviour:
   school: Berklee
   team: Constellations
   age: 0
+  vocalSample: {fileID: 8300000, guid: a2a6cfae5fc6c486dba9e3a031a8af36, type: 3}
+  projectSample: {fileID: 8300000, guid: ea2d75da7cb1545b6bed4ef7989d6658, type: 3}

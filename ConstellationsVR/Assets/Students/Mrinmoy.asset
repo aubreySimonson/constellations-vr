@@ -18,5 +18,5 @@ MonoBehaviour:
   school: Harvard
   team: Aura
   age: 0
-  vocalSample: {fileID: 8300000, guid: 76bbd6117fa694c768633a14db3e5642, type: 3}
-  projectSample: {fileID: 8300000, guid: 5462484753c384e3e9f2d53e8aeaafbb, type: 3}
+  vocalSample: {fileID: 8300000, guid: ed89745d48fc041c0ae77ae0d274a885, type: 3}
+  projectSample: {fileID: 8300000, guid: 4c19c8707090d46c19a13027c7943aea, type: 3}

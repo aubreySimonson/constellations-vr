@@ -19,4 +19,4 @@ MonoBehaviour:
   team: Constellations
   age: 0
   vocalSample: {fileID: 8300000, guid: fa033ae7266ac4442b2e75da2a098442, type: 3}
-  projectSample: {fileID: 0}
+  projectSample: {fileID: 8300000, guid: 47e2081252ec9418ca469d8e223f6694, type: 3}

@@ -18,5 +18,5 @@ MonoBehaviour:
   school: Harvard
   team: StageFright
   age: 0
-  vocalSample: {fileID: 8300000, guid: fad0f844a20804d5cb789d7893a3f066, type: 3}
-  projectSample: {fileID: 8300000, guid: 050545dbb3a2e4a8aa31570a73a91606, type: 3}
+  vocalSample: {fileID: 8300000, guid: a72ac7c33300043a1841d9abea4220e3, type: 3}
+  projectSample: {fileID: 8300000, guid: 9a5851965d71c4718b7f9aefb833f2b4, type: 3}

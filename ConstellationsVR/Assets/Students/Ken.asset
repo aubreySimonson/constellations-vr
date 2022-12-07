@@ -18,3 +18,5 @@ MonoBehaviour:
   school: MIT
   team: Null
   age: 0
+  vocalSample: {fileID: 8300000, guid: 98825dcf1281f42c286ba3a76aa2e490, type: 3}
+  projectSample: {fileID: 8300000, guid: ea2d75da7cb1545b6bed4ef7989d6658, type: 3}

@@ -18,5 +18,5 @@ MonoBehaviour:
   school: Berklee
   team: StageFright
   age: 0
-  vocalSample: {fileID: 8300000, guid: 20122b2eda8f24ad6adfed2db6aed03a, type: 3}
-  projectSample: {fileID: 8300000, guid: a20404702ca1d47e2b96568660e21da3, type: 3}
+  vocalSample: {fileID: 8300000, guid: fbce7ef38f6874df78147375629851b0, type: 3}
+  projectSample: {fileID: 8300000, guid: ea3978990ec3d45578c81cbb0467f1c2, type: 3}

@@ -33,6 +33,7 @@ public class ObjectManager : MonoBehaviour
     // Positioning
     [SerializeField] Vector3[] SchoolPosition; // 0 = Berklee, 1 = Harvard, 2 = MIT
     [SerializeField] Vector3[] GroupPosition; // 0 = Aura, 1 = Magic, 2 = MusiCraft, 3 = Sonic Soup, 4 = StageFreight
+    Vector3 result;
 
 
     public void InstantiateCsoundObject()
@@ -88,37 +89,39 @@ public class ObjectManager : MonoBehaviour
 
     }
 
-    public void Sorting(int mode) // 0 = school, 1 = group, 2 = random-- char doesn't work well for Unity Events, we tried
+    public void Sorting(int mode) // s = school, g = group, r = random
     {
         UpdateCurrentObjectsInScene();
 
+
         switch (mode)
         {
-            case 0: // Scool Sorting
+            case 0: // School Sorting
                 for (int i = 0; i < inScene.Length; i++)
                 {
                     string school = inScene[i].GetComponent<ObjectLogic>().studentData.school;
+                    Vector3 offset = new Vector3(Random.Range(0, 3), Random.Range(0, 3), Random.Range(0, 3));
 
                     switch (school)
                     {
                         case "Berklee":
-                            Vector3 offset = new Vector3(Random.Range(0, 3), Random.Range(0, 3), Random.Range(0, 3));
-                            Vector3 result = SchoolPosition[0] + offset;
-                            StartCoroutine(LerpPosition(result, 5, inScene[i]));
-
+                            result = SchoolPosition[0] + offset;
                             break;
                         case "Harvard":
+                            result = SchoolPosition[1] + offset;
                             break;
-
                         case "MIT":
+                            result = SchoolPosition[2] + offset;
                             break;
-
                         case "Null":
+                            result = SchoolPosition[3] + offset;
                             break;
                     }
+
+                    StartCoroutine(LerpPosition(result, 5, inScene[i]));
                 }
 
-                break;
+break;
             case 1: // Group Sorting
 
                 break;
@@ -129,15 +132,15 @@ public class ObjectManager : MonoBehaviour
     }
 
     void UpdateCurrentObjectsInScene()
-    {
-        inScene = GameObject.FindGameObjectsWithTag("Sound Object");
-    }
+{
+    inScene = GameObject.FindGameObjectsWithTag("Sound Object");
+}
 
-    IEnumerator LerpPosition(Vector3 targetPosition, float duration, GameObject currentObject)
-    {
-        float time = 0;
-        Vector3 startPosition = currentObject.transform.position;
-        while (time < duration)
+IEnumerator LerpPosition(Vector3 targetPosition, float duration, GameObject currentObject)
+{
+    float time = 0;
+    Vector3 startPosition = currentObject.transform.position;
+        while (time<duration)
         {
             currentObject.transform.position = Vector3.Lerp(startPosition, targetPosition, time / duration);
             time += Time.deltaTime;
@@ -147,3 +150,4 @@ public class ObjectManager : MonoBehaviour
     }
 
 }
+
