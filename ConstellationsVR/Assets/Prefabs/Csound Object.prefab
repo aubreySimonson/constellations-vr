@@ -20,9 +20,10 @@ GameObject:
   - component: {fileID: 2127345969952745380}
   - component: {fileID: -7190462610138090577}
   - component: {fileID: -1924331108810316920}
+  - component: {fileID: 4047738426686414465}
   m_Layer: 0
   m_Name: Csound Object
-  m_TagString: Untagged
+  m_TagString: unselected
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -825,14 +826,14 @@ MonoBehaviour:
   _drawTestScore: 0
   _drawSettings: 1
   _drawChannels: 1
-  _drawAudioChannels: 0
-  _drawPresets: 0
+  _drawAudioChannels: 1
+  _drawPresets: 1
   _drawPresetsLoad: 0
   _drawPresetsSave: 0
   _drawPresetsImport: 0
   _showRuntimeEnvironmentPath: 1
   _currentPreset: 
-  _currentPresetSaveFolder: 
+  _currentPresetSaveFolder: /Users/mateolarreaferro/Desktop/cuSketch/constellations-vr/ConstellationsVR/Assets
   _currentPresetLoadFolder: /Users/mateolarreaferro/Desktop/cuSketch/constellations-vr/ConstellationsVR/Assets
 --- !u!114 &2098323262023087734
 MonoBehaviour:
@@ -950,3 +951,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugText: {fileID: 0}
   bird: {fileID: 0}
+--- !u!114 &4047738426686414465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098323262023087695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048da98850fe8403ca46b30418284020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -6,9 +6,11 @@ public class cuSliders : MonoBehaviour
 {
     // Csound
     [SerializeField] CsoundUnity csound;
-    [SerializeField] string nameOfGameObject;
-    [SerializeField] string[] parameters;
+    [SerializeField] GameObject csoundGameObject;
+   [SerializeField] string[] parameters;
     [SerializeField] float[] _multiplier;
+
+    [SerializeField] GameObject[] _sliders;
 
     bool soundEditing = false;
 
@@ -36,16 +38,21 @@ public class cuSliders : MonoBehaviour
     {
         if (!soundEditing)
         {
-            csound = GameObject.FindGameObjectWithTag("selected").GetComponent<CsoundUnity>();
-            UpdatePositionofSliders(csound);
+            csoundGameObject = GameObject.FindGameObjectWithTag("selected");
+            csound = csoundGameObject.GetComponent<CsoundUnity>();
+            UpdatePositionofSliders(csoundGameObject);
             soundEditing = true;
         }
         else
             soundEditing = false;
     }
 
-    void UpdatePositionofSliders(CsoundUnity instance)
+    void UpdatePositionofSliders(GameObject csoundGameObject)
     {
-
+        for (int i = 0; i < _sliders.Length; i++)
+        {
+            float sliderValue = csoundGameObject.GetComponent<CsoundPresetData>().UpdateValues(i);
+            _sliders[i].transform.localPosition = new Vector3(transform.position.x, sliderValue , transform.position.z); // physical movement of slider
+        }
     }
 }

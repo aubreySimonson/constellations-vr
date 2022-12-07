@@ -1280,17 +1280,29 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a9b090a12e40f4249831a287f4375a25, type: 2}
+    - target: {fileID: 1958645440071890943, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958645440071890943, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958645440071890943, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.56
+      objectReference: {fileID: 0}
     - target: {fileID: 1958645440755952075, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1958645441084958758, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
       propertyPath: m_Name
-      value: BrushGenerator
+      value: Sliders
       objectReference: {fileID: 0}
     - target: {fileID: 1958645441084958762, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1958645441084958762, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
       propertyPath: m_LocalScale.x
@@ -2584,6 +2596,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 482130, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
   m_PrefabInstance: {fileID: 876328256}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &907295951 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1958645441084958758, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
+  m_PrefabInstance: {fileID: 579036023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &907295952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907295951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 476757900ec2a4d2186a933c49009c4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  csound: {fileID: 0}
+  parameters: []
+  _multiplier: []
 --- !u!1001 &991107723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3069,38 +3101,6 @@ MonoBehaviour:
   _headPoseRelativeOffsetRotation: {x: 0, y: 0, z: 0}
   _headPoseRelativeOffsetTranslation: {x: 0, y: 0, z: 0}
   profilerTcpPort: 32419
-  expandMixedRealityCapturePropertySheet: 0
-  enableMixedReality: 0
-  compositionMethod: 0
-  extraHiddenLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  extraVisibleLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  dynamicCullingMask: 1
-  externalCompositionBackdropColorRift: {r: 0, g: 1, b: 0, a: 1}
-  externalCompositionBackdropColorQuest: {r: 0, g: 0, b: 0, a: 0}
-  capturingCameraDevice: 0
-  flipCameraFrameHorizontally: 0
-  flipCameraFrameVertically: 0
-  handPoseStateLatency: 0
-  sandwichCompositionRenderLatency: 0
-  sandwichCompositionBufferedFrames: 8
-  chromaKeyColor: {r: 0, g: 1, b: 0, a: 1}
-  chromaKeySimilarity: 0.6
-  chromaKeySmoothRange: 0.03
-  chromaKeySpillRange: 0.06
-  useDynamicLighting: 0
-  depthQuality: 1
-  dynamicLightingSmoothFactor: 8
-  dynamicLightingDepthVariationClampingValue: 0.001
-  virtualGreenScreenType: 0
-  virtualGreenScreenTopY: 10
-  virtualGreenScreenBottomY: -10
-  virtualGreenScreenApplyDepthCulling: 0
-  virtualGreenScreenDepthTolerance: 0.2
-  mrcActivationMode: 0
   isInsightPassthroughEnabled: 0
   _trackingOriginType: 0
   usePositionTracking: 1
@@ -3194,6 +3194,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f8ae95985aef34766987fde221a2db50, type: 2}
   SchoolPosition: []
   GroupPosition: []
+  lerpingTime: 8
 --- !u!4 &1203544656
 Transform:
   m_ObjectHideFlags: 0

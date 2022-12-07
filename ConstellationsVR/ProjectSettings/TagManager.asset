@@ -7,6 +7,9 @@ TagManager:
   - Berklee
   - MIT
   - Harvard
+  - Protected
+  - selected
+  - unselected
   layers:
   - Default
   - TransparentFX
