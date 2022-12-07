@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 6884846586184322209}
   - component: {fileID: -2297156905815991415}
   - component: {fileID: 2127345969952745380}
+  - component: {fileID: -7190462610138090577}
+  - component: {fileID: -1924331108810316920}
   m_Layer: 0
   m_Name: Csound Object
   m_TagString: Untagged
@@ -907,3 +909,44 @@ AudioLowPassFilter:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-7190462610138090577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098323262023087695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd494394095c7454096ed9a5d77e2c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bird: {fileID: 0}
+  activateType: 1
+  selectBehind: 1
+  motionType: 1
+  offset: 0
+  trackingSpeed: 2
+  orientationMode: 3
+  orientationSource: 0
+  snapObjects: []
+  OnSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-1924331108810316920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098323262023087695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 540b826f3d98f4b62bd7acdfbebc6b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugText: {fileID: 0}
+  bird: {fileID: 0}

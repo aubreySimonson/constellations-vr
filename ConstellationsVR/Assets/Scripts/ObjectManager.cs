@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectManager : MonoBehaviour
 {
     // Csound Object - for sound editing
     //[SerializeField] GameObject CsoundEditor; // Object where sample is attached
     [SerializeField] Transform startingPosition;
-    [SerializeField] GameObject CsoundObject;
+    [SerializeField] GameObject CsoundObject;//this is the Csound object we are currently interacting with
     public int numberOfCsoundUnityInstances = 0;
     int numberOfStudent;
 
@@ -19,17 +20,19 @@ public class ObjectManager : MonoBehaviour
     [SerializeField] GameObject sampleObject;
 
 
-    // Audio Source for interface (plays sample when hovering over name)
+    // Audio Source for scrollable sample list (plays sample when hovering over name)
     [SerializeField] AudioSource _source;
 
 
     // Students - Data Structure
-    [SerializeField] Student[] students;
+    //Aubrey set this to public so that we can get at it from GenerateList.cs
+    //Let me know if this is an issue --December 6th, 2022
+    public Student[] students;
 
 
     // Positioning
     [SerializeField] Vector3[] SchoolPosition; // 0 = Berklee, 1 = Harvard, 2 = MIT
-    [SerializeField] Vector3[] GroupPosition; // 0 = Aura, 1 = Magic, 2 = MusiCraft, 3 = Sonic Soup, StageFreight
+    [SerializeField] Vector3[] GroupPosition; // 0 = Aura, 1 = Magic, 2 = MusiCraft, 3 = Sonic Soup, 4 = StageFreight
 
 
     public void InstantiateCsoundObject()
@@ -85,10 +88,9 @@ public class ObjectManager : MonoBehaviour
 
     }
 
-    public void Sorting(int mode) // s = school, g = group, r = random
+    public void Sorting(int mode) // 0 = school, 1 = group, 2 = random-- char doesn't work well for Unity Events, we tried
     {
         UpdateCurrentObjectsInScene();
-
 
         switch (mode)
         {
@@ -145,4 +147,3 @@ public class ObjectManager : MonoBehaviour
     }
 
 }
-

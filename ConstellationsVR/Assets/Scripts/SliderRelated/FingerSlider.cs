@@ -52,10 +52,23 @@ public class FingerSlider : MonoBehaviour
       }
     }
 
+    //call this whenever a Csound object is selected
+    public void SetMarkerAndOutputToValue(float newValue){
+      output = newValue;
+
+      float markerX = marker.transform.position.x;
+      float markerZ = marker.transform.position.z;
+      //if this is behaving weirdly, try switching to +0.5f or 1f-- it could be backwards
+      marker.transform.localPosition = new Vector3(markerX, newValue - 0.5f, markerZ);
+    }
+
+    public float GetSliderValue(){
+      return output;
+    }
+
     void Update(){
       if(sliderIsTouched){
         float markerX = marker.transform.position.x;
-        float markerY = marker.transform.position.y;
         float markerZ = marker.transform.position.z;
         //marker.transform.position = hit.point;
         marker.transform.position = new Vector3(markerX, pointer.transform.position.y, markerZ);

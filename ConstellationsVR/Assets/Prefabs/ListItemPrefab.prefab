@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5765415405493645951
+--- !u!1 &7988879464055729022
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,26 +8,27 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5765415405493645936}
-  - component: {fileID: 5765415405493645938}
-  - component: {fileID: 5765415405493645937}
-  - component: {fileID: 7080714972995002784}
-  - component: {fileID: 8469835900562258231}
-  - component: {fileID: 5295636091836941006}
+  - component: {fileID: 7988879464055729009}
+  - component: {fileID: 7988879464055729011}
+  - component: {fileID: 7988879464055729008}
+  - component: {fileID: 6674103238320404641}
+  - component: {fileID: 5428539217656029238}
+  - component: {fileID: 8620186278620224463}
+  - component: {fileID: 7988879464510658565}
   m_Layer: 5
-  m_Name: ListItem
+  m_Name: ListItemPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &5765415405493645936
+--- !u!224 &7988879464055729009
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5765415405493645951}
+  m_GameObject: {fileID: 7988879464055729022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
@@ -38,23 +39,23 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 230}
-  m_SizeDelta: {x: 200, y: 40}
+  m_SizeDelta: {x: 400, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &5765415405493645938
+--- !u!222 &7988879464055729011
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5765415405493645951}
+  m_GameObject: {fileID: 7988879464055729022}
   m_CullTransparentMesh: 1
---- !u!114 &5765415405493645937
+--- !u!114 &7988879464055729008
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5765415405493645951}
+  m_GameObject: {fileID: 7988879464055729022}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -75,33 +76,33 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: filename
---- !u!65 &7080714972995002784
+  m_Text: no student name found!
+--- !u!65 &6674103238320404641
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5765415405493645951}
+  m_GameObject: {fileID: 7988879464055729022}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 200, y: 50, z: 50}
+  m_Size: {x: 300, y: 30, z: 50}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8469835900562258231
+--- !u!114 &5428539217656029238
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5765415405493645951}
+  m_GameObject: {fileID: 7988879464055729022}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd494394095c7454096ed9a5d77e2c9a, type: 3}
@@ -119,28 +120,28 @@ MonoBehaviour:
   OnSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5765415405493645937}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
-        m_MethodName: set_text
-        m_Mode: 5
+      - m_Target: {fileID: 8620186278620224463}
+        m_TargetAssemblyTypeName: ListItem, Assembly-CSharp
+        m_MethodName: CreateSampleSphere
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: this was selected
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   OnDeselect:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &5295636091836941006
+--- !u!114 &8620186278620224463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5765415405493645951}
+  m_GameObject: {fileID: 7988879464055729022}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3b1c3cfcf0e8488c80c352ee1b8fcfe, type: 3}
@@ -148,33 +149,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listScroll: {fileID: 0}
   bird: {fileID: 0}
+  objectManager: {fileID: 0}
+  id: 0
+  soundSpherePrefab: {fileID: 5708595056795574927, guid: 02129cc7b64174ce9a58ed2eed638f9f, type: 3}
   OnTouch:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5765415405493645937}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
-        m_MethodName: set_text
-        m_Mode: 5
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ObjectManager, Assembly-CSharp
+        m_MethodName: ScrollingThroughSamples
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: text touched
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   OnRelease:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5765415405493645937}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
-        m_MethodName: set_text
-        m_Mode: 5
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ObjectManager, Assembly-CSharp
+        m_MethodName: StopSample
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: text released
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7988879464510658565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988879464055729022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd863211f0da4c2c821fa878ec52485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bird: {fileID: 0}
+  objectManager: {fileID: 0}
+  id: 0

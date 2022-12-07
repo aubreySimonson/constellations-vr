@@ -18,3 +18,5 @@ MonoBehaviour:
   school: MIT
   team: Constellations
   age: 0
+  vocalSample: {fileID: 8300000, guid: fa033ae7266ac4442b2e75da2a098442, type: 3}
+  projectSample: {fileID: 0}

@@ -17,6 +17,10 @@ public class ListItem : MonoBehaviour
     Collider thisCollider;//collider component of the object this script is on
     private bool inCollider = false;
 
+    public ObjectManager objectManager;
+    public int id;//should be told about this by GenerateList when the list is generated
+    public GameObject soundSpherePrefab;
+
     [SerializeField] UnityEvent OnTouch;
     [SerializeField] UnityEvent OnRelease;
 
@@ -25,6 +29,12 @@ public class ListItem : MonoBehaviour
     {
       if(bird == null){
         bird = GameObject.Find("OVRHandPrefab_Right").GetComponent<Bird>();
+      }
+      if(listScroll == null){
+        listScroll = GameObject.Find("SamplesListGameObject").GetComponent<ListScroll>();
+      }
+      if(objectManager == null){
+        objectManager = GameObject.Find("Object Manager").GetComponent<ObjectManager>();
       }
       thisCollider = GetComponent<Collider>();
     }
@@ -53,4 +63,13 @@ public class ListItem : MonoBehaviour
         }//end if
       }//end else
     }//end update
+
+    //this function exists so that we can reference it in the ontouch unity event in the same game object
+    //instantiation at runtime is a strange place
+    public void CreateSampleSphere(){
+      GameObject newSampleSphere = Instantiate(soundSpherePrefab);
+      newSampleSphere.transform.position = gameObject.transform.position;//we'll place this better later...
+      newSampleSphere.GetComponent<SampleSelector>()._id = id;
+      objectManager.SelectingSample(id);
+    }
 }
