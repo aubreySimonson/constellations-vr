@@ -17,9 +17,7 @@ public class FingerSlider : MonoBehaviour
     public GameObject pointer; //tiny cube on the pointer finger
     private float output;
     private bool sliderIsTouched;
-    public Text debugText;
-    public Text debugText2;
-    public Text debugText3;
+
 
 
     // Start is called before the first frame update
@@ -31,24 +29,20 @@ public class FingerSlider : MonoBehaviour
     void OnTriggerEnter(Collider other){
       if (other.gameObject == pointer){
         sliderIsTouched = true;
-        debugText2.text = "true";
       }
     }
 
     void OnTriggerExit(Collider other){
       if(other.gameObject == pointer){
         sliderIsTouched = false;
-        debugText2.text = "false";
       }
     }
 
     public void FindPointer(){
-      debugText.text = "find pointer called";
       //this can't just happen in start because we need to make sure that
       //create pointer has actually created the pointer by the time we look for it
       pointer = GameObject.Find("Pointer(Clone)");
       if(pointer!=null){
-        debugText.text = "pointer found";
       }
     }
 
@@ -80,7 +74,6 @@ public class FingerSlider : MonoBehaviour
         else if(output>1f){
           output=1f;
         }
-        debugText3.text = output.ToString();
       }
     }
 

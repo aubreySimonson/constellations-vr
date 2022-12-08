@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 12441609}
   - component: {fileID: 12441608}
   m_Layer: 0
-  m_Name: LPF
+  m_Name: Echo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1106,6 +1106,7 @@ GameObject:
   - component: {fileID: 501364953}
   - component: {fileID: 501364952}
   - component: {fileID: 501364951}
+  - component: {fileID: 501364954}
   m_Layer: 8
   m_Name: SliderHitArea
   m_TagString: Untagged
@@ -1190,6 +1191,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501364949}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &501364954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501364949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e8a525d91f9642f5b351d20599012f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marker: {fileID: 0}
+  pointer: {fileID: 0}
 --- !u!1 &530336851
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,7 +1301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1958645440071890943, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: -0.013
       objectReference: {fileID: 0}
     - target: {fileID: 1958645440071890943, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1387,6 +1402,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1958645441084958762, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
   m_PrefabInstance: {fileID: 579036023}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &579036025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1958645440755952071, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
+  m_PrefabInstance: {fileID: 579036023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &579036026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1958645440071890939, guid: d26c80f4c3644445cb0dcf4d42a79701, type: 3}
+  m_PrefabInstance: {fileID: 579036023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &579036027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579036025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e8a525d91f9642f5b351d20599012f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marker: {fileID: 0}
+  pointer: {fileID: 0}
 --- !u!1 &586443087
 GameObject:
   m_ObjectHideFlags: 0
@@ -2120,6 +2159,7 @@ GameObject:
   - component: {fileID: 745999286}
   - component: {fileID: 745999285}
   - component: {fileID: 745999284}
+  - component: {fileID: 745999287}
   m_Layer: 8
   m_Name: SliderHitArea
   m_TagString: Untagged
@@ -2204,6 +2244,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745999282}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &745999287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745999282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e8a525d91f9642f5b351d20599012f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marker: {fileID: 0}
+  pointer: {fileID: 0}
 --- !u!1 &757849354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2284,7 +2338,7 @@ GameObject:
   - component: {fileID: 777039294}
   - component: {fileID: 777039293}
   m_Layer: 0
-  m_Name: Delay
+  m_Name: Reverb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2614,8 +2668,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   csound: {fileID: 0}
-  parameters: []
-  _multiplier: []
+  csoundGameObject: {fileID: 0}
+  parameters:
+  - masterLvl
+  - pitch
+  - stresMod
+  - verbLvl
+  - echoLvl
+  _multiplier:
+  - 1
+  - 6
+  - 4
+  - 1
+  - 2
+  _sliders:
+  - {fileID: 579036026}
+  - {fileID: 2109270265}
+  - {fileID: 2082496893}
+  - {fileID: 613077918}
+  - {fileID: 586443087}
+  _fingerSliders:
+  - {fileID: 579036027}
+  - {fileID: 1397742827}
+  - {fileID: 501364954}
+  - {fileID: 1841035090}
+  - {fileID: 745999287}
+  objectManager: {fileID: 1203544655}
 --- !u!1001 &991107723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3195,6 +3273,7 @@ MonoBehaviour:
   SchoolPosition: []
   GroupPosition: []
   lerpingTime: 8
+  currentCsoundObject: {fileID: 0}
 --- !u!4 &1203544656
 Transform:
   m_ObjectHideFlags: 0
@@ -3412,6 +3491,7 @@ GameObject:
   - component: {fileID: 1397742826}
   - component: {fileID: 1397742825}
   - component: {fileID: 1397742824}
+  - component: {fileID: 1397742827}
   m_Layer: 8
   m_Name: SliderHitArea
   m_TagString: Untagged
@@ -3496,6 +3576,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397742822}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1397742827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397742822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e8a525d91f9642f5b351d20599012f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marker: {fileID: 0}
+  pointer: {fileID: 0}
 --- !u!1 &1479316953
 GameObject:
   m_ObjectHideFlags: 0
@@ -3936,6 +4030,7 @@ GameObject:
   - component: {fileID: 1841035089}
   - component: {fileID: 1841035088}
   - component: {fileID: 1841035087}
+  - component: {fileID: 1841035090}
   m_Layer: 8
   m_Name: SliderHitArea
   m_TagString: Untagged
@@ -4020,6 +4115,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841035085}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1841035090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841035085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e8a525d91f9642f5b351d20599012f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marker: {fileID: 0}
+  pointer: {fileID: 0}
 --- !u!1 &2001664447
 GameObject:
   m_ObjectHideFlags: 0

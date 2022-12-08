@@ -38,12 +38,14 @@ public class ObjectManager : MonoBehaviour
     // Random Positioning
     float maxDistance = 20f;
 
+    public GameObject currentCsoundObject;//the csound object we currently have selected
+
 
     public void InstantiateCsoundObject()
     {
         numberOfCsoundUnityInstances++;
         GameObject copy = Instantiate(CsoundObject, startingPosition);
-        copy.tag = "unselected";
+        //copy.tag = "unselected";
         copy.name = "CU" + numberOfCsoundUnityInstances.ToString();
     }
 
@@ -147,7 +149,7 @@ public class ObjectManager : MonoBehaviour
                         case "SonicSoup":
                             result = GroupPosition[3] + offset;
                             break;
-                        case "StageFreight":
+                        case "StageFright":
                             result = GroupPosition[4] + offset;
                             break;
 
