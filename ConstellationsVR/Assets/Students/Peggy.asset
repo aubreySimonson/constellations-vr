@@ -16,7 +16,7 @@ MonoBehaviour:
   id: 26
   teachingTeam: 0
   school: Harvard
-  team: Dovetail
+  team: SonicSoup
   age: 0
   vocalSample: {fileID: 8300000, guid: 92d95bc7569784312abef242607e65d6, type: 3}
   projectSample: {fileID: 8300000, guid: 62c2239a7f64e41a8bfb6efb10832290, type: 3}

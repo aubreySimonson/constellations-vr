@@ -16,7 +16,7 @@ MonoBehaviour:
   id: 6
   teachingTeam: 0
   school: Harvard
-  team: Emmm
+  team: MusiCraft
   age: 0
   vocalSample: {fileID: 8300000, guid: f31e52aef78274ef590369bc81006734, type: 3}
   projectSample: {fileID: 8300000, guid: 0f33a63d0cd824e399ba088483a6400a, type: 3}
