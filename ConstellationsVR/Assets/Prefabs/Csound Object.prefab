@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: -7190462610138090577}
   - component: {fileID: -1924331108810316920}
   - component: {fileID: 4047738426686414465}
+  - component: {fileID: 5939152469035662169}
   m_Layer: 0
   m_Name: Csound Object
   m_TagString: unselected
@@ -933,10 +934,34 @@ MonoBehaviour:
   snapObjects: []
   OnSelect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5939152469035662169}
+        m_TargetAssemblyTypeName: CSoundOnClickBehavior, Assembly-CSharp
+        m_MethodName: DoTheseOnSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDeselect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5939152469035662169}
+        m_TargetAssemblyTypeName: CSoundOnClickBehavior, Assembly-CSharp
+        m_MethodName: DoTheseOnDeselect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &-1924331108810316920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -963,3 +988,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048da98850fe8403ca46b30418284020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  valueSliders:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+--- !u!114 &5939152469035662169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098323262023087695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4ca1cbbb0664fab8d27f105aa98b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectManager: {fileID: 0}
+  sliders: {fileID: 0}

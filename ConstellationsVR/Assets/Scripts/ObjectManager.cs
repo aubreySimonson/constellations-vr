@@ -8,7 +8,7 @@ public class ObjectManager : MonoBehaviour
     // Csound Object - for sound editing
     //[SerializeField] GameObject CsoundEditor; // Object where sample is attached
     [SerializeField] Transform startingPosition;
-    [SerializeField] GameObject CsoundObject;//this is the Csound object we are currently interacting with
+    [SerializeField] GameObject CsoundObject;//this is the prefab (@Mateo-- right? is this the prefab?)
     public int numberOfCsoundUnityInstances = 0;
     int numberOfStudent;
 
@@ -192,4 +192,3 @@ IEnumerator LerpPosition(Vector3 targetPosition, float duration, GameObject curr
     }
 
 }
-
