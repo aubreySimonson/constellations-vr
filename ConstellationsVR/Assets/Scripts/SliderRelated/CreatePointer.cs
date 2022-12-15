@@ -39,7 +39,7 @@ public class CreatePointer : MonoBehaviour
       }//end foreach
       //now we tell every finger slider about the pointer, after generating it
       foreach(FingerSlider slider in fingerSliders){
-        slider.FindPointer();
+        slider.FindPointers();
       }
     }//end awake
 }//end class

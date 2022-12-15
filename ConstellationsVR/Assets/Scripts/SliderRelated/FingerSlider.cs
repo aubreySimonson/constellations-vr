@@ -14,9 +14,11 @@ using UnityEngine.UI;
 public class FingerSlider : MonoBehaviour
 {
     public GameObject marker;
-    public GameObject pointer; //tiny cube on the pointer finger
+    public CreatePointer rightHand, leftHand;//so that we can find the pointers
+    public GameObject rightPointer; //tiny cube on the pointer finger
+    public GameObject leftPointer; //tiny cube on the pointer finger
     private float output;
-    private bool sliderIsTouched;
+    private bool sliderIsTouchedRight, sliderIsTouchedLeft;//we need to know what hand we're using to know where to put the marker
 
 
 
@@ -26,24 +28,32 @@ public class FingerSlider : MonoBehaviour
         output = 0.0f;
     }
 
+    //if someone tries really hard to break this by poking the slider with both hands at the same time, they can
+    //we should maybe fix that later
     void OnTriggerEnter(Collider other){
-      if (other.gameObject == pointer){
-        sliderIsTouched = true;
+      if (other.gameObject == rightPointer){
+        sliderIsTouchedRight = true;
+      }
+      if (other.gameObject == leftPointer){
+        sliderIsTouchedLeft = true;
       }
     }
 
     void OnTriggerExit(Collider other){
-      if(other.gameObject == pointer){
-        sliderIsTouched = false;
+      if (other.gameObject == rightPointer){
+        sliderIsTouchedRight = false;
+      }
+      if (other.gameObject == leftPointer){
+        sliderIsTouchedLeft = false;
       }
     }
 
-    public void FindPointer(){
+    public void FindPointers(){
       //this can't just happen in start because we need to make sure that
       //create pointer has actually created the pointer by the time we look for it
-      pointer = GameObject.Find("Pointer(Clone)");
-      if(pointer!=null){
-      }
+      //pointer = GameObject.Find("Pointer(Clone)");
+      rightPointer = rightHand.pointer;
+      leftPointer = leftHand.pointer;
     }
 
     //call this whenever a Csound object is selected
@@ -61,11 +71,16 @@ public class FingerSlider : MonoBehaviour
     }
 
     void Update(){
-      if(sliderIsTouched){
+      if(sliderIsTouchedRight || sliderIsTouchedLeft){
         float markerX = marker.transform.position.x;
         float markerZ = marker.transform.position.z;
         //marker.transform.position = hit.point;
-        marker.transform.position = new Vector3(markerX, pointer.transform.position.y, markerZ);
+        if(sliderIsTouchedRight){
+          marker.transform.position = new Vector3(markerX, rightPointer.transform.position.y, markerZ);
+        }
+        if(sliderIsTouchedLeft){
+          marker.transform.position = new Vector3(markerX, leftPointer.transform.position.y, markerZ);
+        }
         output = marker.transform.localPosition.y + 0.5f;//makes it 0-1
         //we do this because the range is almost but not quite exact
         if(output < 0f){
@@ -76,26 +91,4 @@ public class FingerSlider : MonoBehaviour
         }
       }
     }
-
-    // void Update()
-    // {
-    //     debugText2.text = indexBone.Transform.position.ToString();
-    //     RaycastHit hit;
-    //     if (Physics.Raycast(pointer.transform.position, pointer.transform.up, out hit, 100.0f))//we've tried forward
-    //     {
-    //         if(hit.collider.gameObject.name == "SliderHitArea")
-    //         {
-    //             //you need to convert everything to local coordinates so that it has the right axis and everything
-    //             Vector3 localHit = transform.InverseTransformPoint(hit.point);
-    //             float markerX = marker.transform.localPosition.x;
-    //             float markerY = marker.transform.localPosition.y;
-    //             float markerZ = marker.transform.localPosition.z;
-    //             //marker.transform.position = hit.point;
-    //             marker.transform.localPosition = new Vector3(markerX, localHit.y, markerZ);
-    //             debugText4.text = localHit.y.ToString();
-    //             output = localHit.y + 0.5f * 10.0f;//makes it 0-1
-    //             debugText.text = output.ToString();
-    //         }//end if
-    //     }//end if
-    // }//end update
 }//end class

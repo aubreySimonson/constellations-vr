@@ -1,3 +1,11 @@
+//Part of ConstellationsVR
+//
+//Every CSound Object has a copy of this script.
+//It stores the slider values when the CSound Object is not being edited.
+
+//???-->Mateo
+//Last edited Dec 2022
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,6 +27,7 @@ public class CsoundPresetData : MonoBehaviour
 
     }
 
+    //it's on Aubrey's to do list to eventually rename this to "GetValues" and resolve any hacov that causes
     public float UpdateValues(int index)
     {
         return valueSliders[index];

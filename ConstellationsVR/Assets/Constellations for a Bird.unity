@@ -396,6 +396,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1870938896605422, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
   m_PrefabInstance: {fileID: 285976916}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &165585584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165585583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec66a1a5be584f8faec5ae047762e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointer: {fileID: 0}
+  pointerPrefab: {fileID: 3938916056449361542, guid: f0ded78c330b240fb958c57919d6431b, type: 3}
+  hand: {fileID: 165585583}
+  fingerSliders:
+  - {fileID: 579036027}
+  - {fileID: 1397742827}
+  - {fileID: 501364954}
+  - {fileID: 1841035090}
+  - {fileID: 745999287}
 --- !u!114 &165585591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1320,7 +1341,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   marker: {fileID: 2082496893}
-  pointer: {fileID: 0}
+  rightHand: {fileID: 40919615}
+  leftHand: {fileID: 165585584}
+  rightPointer: {fileID: 0}
+  leftPointer: {fileID: 0}
 --- !u!1 &530336851
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,8 +1564,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e8a525d91f9642f5b351d20599012f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  marker: {fileID: 2109270265}
-  pointer: {fileID: 0}
+  marker: {fileID: 579036026}
+  rightHand: {fileID: 40919615}
+  leftHand: {fileID: 165585584}
+  rightPointer: {fileID: 0}
+  leftPointer: {fileID: 0}
 --- !u!1 &586443087
 GameObject:
   m_ObjectHideFlags: 0
@@ -2373,7 +2400,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   marker: {fileID: 586443087}
-  pointer: {fileID: 0}
+  rightHand: {fileID: 40919615}
+  leftHand: {fileID: 165585584}
+  rightPointer: {fileID: 0}
+  leftPointer: {fileID: 0}
 --- !u!1 &757849354
 GameObject:
   m_ObjectHideFlags: 0
@@ -3865,7 +3895,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   marker: {fileID: 2109270265}
-  pointer: {fileID: 0}
+  rightHand: {fileID: 40919615}
+  leftHand: {fileID: 165585584}
+  rightPointer: {fileID: 0}
+  leftPointer: {fileID: 0}
 --- !u!1 &1479316953
 GameObject:
   m_ObjectHideFlags: 0
@@ -3976,18 +4009,6 @@ PrefabInstance:
     - target: {fileID: 2098323262023087689, guid: d57482d9df78348e6b3aa6b781c6a6b4, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2098323262023087689, guid: d57482d9df78348e6b3aa6b781c6a6b4, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2098323262023087689, guid: d57482d9df78348e6b3aa6b781c6a6b4, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2098323262023087689, guid: d57482d9df78348e6b3aa6b781c6a6b4, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2098323262023087689, guid: d57482d9df78348e6b3aa6b781c6a6b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4458,7 +4479,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   marker: {fileID: 613077918}
-  pointer: {fileID: 0}
+  rightHand: {fileID: 40919615}
+  leftHand: {fileID: 165585584}
+  rightPointer: {fileID: 0}
+  leftPointer: {fileID: 0}
 --- !u!1 &2001664447
 GameObject:
   m_ObjectHideFlags: 0

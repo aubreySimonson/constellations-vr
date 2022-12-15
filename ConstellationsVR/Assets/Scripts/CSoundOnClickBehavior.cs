@@ -30,11 +30,13 @@ public class CSoundOnClickBehavior : MonoBehaviour
     public void DoTheseOnSelect()
     {
       objectManager.currentCsoundObject = gameObject;//tell object manager we selected this object
-      sliders.CsoundInstanceEditing();
+      //sliders.CsoundInstanceEditing();
+      sliders.UpdatePositionofSliders(objectManager.currentCsoundObject);
     }
 
     public void DoTheseOnDeselect(){
       if(objectManager.currentCsoundObject == gameObject){
+        sliders.SavePreset();
         objectManager.currentCsoundObject = null;//tell the object manager we no longer have anything selected
       }
     }

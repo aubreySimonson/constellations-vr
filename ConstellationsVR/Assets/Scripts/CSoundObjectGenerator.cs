@@ -19,6 +19,11 @@ public class CSoundObjectGenerator : MonoBehaviour
     private void OnTriggerExit(Collider other){
       if(other.gameObject == currentSphere){
         currentSphere = Instantiate(cSoundPrefab);
+
+        //position it correctly
+        currentSphere.transform.parent = gameObject.transform;
+        currentSphere.transform.position = gameObject.transform.position;
+        currentSphere.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
       }
     }
 
